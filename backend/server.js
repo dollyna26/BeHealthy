@@ -14,5 +14,9 @@ init();
 app.use('/api/auth', authRoutes);
 app.use('/api/entries', entryRoutes);
 
-const PORT = process.env.PORT || 4000;
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
+
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log('Server running on', PORT));
