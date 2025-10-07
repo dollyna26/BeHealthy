@@ -14,5 +14,5 @@ init();
 app.use('/api/auth', authRoutes);
 app.use('/api/entries', entryRoutes);
 
-const port = process.env.PORT || 4000;
-app.listen(port, () => console.log('Server running on', port));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log('Server running on', PORT));
